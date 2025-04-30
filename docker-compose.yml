@@ -39,12 +39,11 @@ services:
 
   mongo:
     image: mongo:6.0
-    ports:
-      - "27018:27017"
+    
     networks:
       - app-net
     volumes:
-      - shared-data:/data/db
+      - mongo-data:/data/db
 
 volumes:
   shared-data:
